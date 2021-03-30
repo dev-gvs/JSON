@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:padding="16dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="16dp"
+        app:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:textColor="#0366D6"
+                android:textSize="32sp"
+                tools:text="v1.8.1" />
+
+            <TextView
+                android:id="@+id/textViewNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textViewVersion"
+                android:textColor="#24292E"
+                android:textSize="16sp"
+                tools:text="- New: Add monospace enforcement for certain elements in Markdown editor (#4689 by @CalebJohn)\n- New: Add support for higlighting text from Rich Text editor\n- New: Add support for strikethrough, sub, sup and insert formatting on Rich Text editor" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
