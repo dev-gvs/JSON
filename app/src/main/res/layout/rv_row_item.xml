@@ -20,7 +20,7 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/textViewVersion"
+                android:id="@+id/textViewVersionName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -29,10 +29,10 @@
                 tools:text="v1.8.1" />
 
             <TextView
-                android:id="@+id/textViewNotes"
+                android:id="@+id/textViewVersionChanges"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewVersion"
+                android:layout_below="@+id/textViewVersionName"
                 android:textColor="#24292E"
                 android:textSize="16sp"
                 tools:text="- New: Add monospace enforcement for certain elements in Markdown editor (#4689 by @CalebJohn)\n- New: Add support for higlighting text from Rich Text editor\n- New: Add support for strikethrough, sub, sup and insert formatting on Rich Text editor" />

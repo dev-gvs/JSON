@@ -73,9 +73,9 @@ class RVAdapter extends RecyclerView.Adapter<RVAdapter.ReleaseViewHolder> {
 
         ReleaseViewHolder(View itemView) {
             super(itemView);
-            cv = (CardView) itemView.findViewById(R.id.cardView);
-            version = (TextView) itemView.findViewById(R.id.textViewVersion);
-            changes = (TextView) itemView.findViewById(R.id.textViewNotes);
+            cv = itemView.findViewById(R.id.cardView);
+            version = itemView.findViewById(R.id.textViewVersionName);
+            changes = itemView.findViewById(R.id.textViewVersionChanges);
         }
     }
 
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         MySingleton singleton = MySingleton.getInstance(this.getApplicationContext());
         adapter = new RVAdapter(releaseList, singleton.getMarkwon());
 
-        final String url = "https://api.github.com/repos/laurent22/joplin/releases";
+        final String url = "https://api.github.com/repos/cryptomator/cryptomator/releases";
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest
                 (Request.Method.GET, url, null, response -> {
                     initializeData(response);
